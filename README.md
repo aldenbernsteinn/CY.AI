@@ -1,4 +1,4 @@
-Create Your own Artificial Intelligence chatbot with CY.AI! 
+# Create Your own Artificial Intelligence chatbot with CY.AI! 
 
 Complete with a custom chat box and voice-to-voice conversation functions.
 
@@ -16,7 +16,7 @@ Instructions will be Numbered (1, 2, 3)
 
 =====================
 
-Step 1: Setting Up Ollama
+# Step 1: Setting Up Ollama
 
 
 # 1. Download Ollama here locally to your system: https://ollama.com/
@@ -54,8 +54,7 @@ YAML
 
 ---------
 
-# Step 3: The easy way to change the personality of your AI 
- # This step is optional
+# Step 3: The easy way to change the personality of your AI (Optional)
 
 - * In your own copy of the yaml. file, see the "SYSTEM" portion, this part is responsible for telling the AI who it is, and how it should act.
 
@@ -80,6 +79,10 @@ YAML
 
 ollama create (NAME OF YOUR MODEL) - f (NAME OF YOUR YAML FILE)
 
+# 2. Run the following command in ANY terminal to see if Ollama has created your new model
+
+ollama list
+
 * Note you will have to change the model name in the CY.AI.py to reflect your changes, there will be instructions on this later once your python file is set up properly). Also You can create as many models as you want with Ollama.
 
 
@@ -87,7 +90,6 @@ ollama create (NAME OF YOUR MODEL) - f (NAME OF YOUR YAML FILE)
 =========================================
 
 PYTHON Setting up your Python environment
-
 --
 # Step 5: 
 
@@ -131,9 +133,7 @@ deactivate
 
 ---
 
-# Step 9: 
-
-# * this entire step is optional
+# Step 9: Implementing custom personalities (Optional)
 
 * IF you changed the model name in your yaml. file please navigate to the following part of the python code (line 436 defaulted):
 
