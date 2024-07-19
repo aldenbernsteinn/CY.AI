@@ -9,7 +9,7 @@ ALL dependencies are completely free. WILL work instantly locally on a computer.
 
 Please see instructions bellow:
 
-=====================================
+===================================
 
 KEY:
 
@@ -18,7 +18,7 @@ Instructions will be formated like this
 * comments and information that could be helpful during your setup are formated like this
 
 
-=====================================
+===================================
 
 # Step 1: Setting Up Ollama
 
@@ -30,7 +30,7 @@ Download Ollama here locally to your system: https://ollama.com/
 
 https://www.youtube.com/watch?v=oI7VoTM9NKQ
 
-=====================================
+===================================
 
 * Before proceeding to the next step, here is some information about Ollama models, compatibility, and how to customize other models besides Llama3 and Gemma2.
 
@@ -39,10 +39,7 @@ https://www.youtube.com/watch?v=oI7VoTM9NKQ
  -  * If you would prefer to use other models such as Phi3, or Mistral, then you will have to make your own custom yaml. yourself. The  parameters/template are handled differently for each and every model. Ollama provides the information you would need to set this up, but you will have to format it for yaml. 
 
 
-=====================================
-
-YAML
-----------
+===================================
 
 # Step 2: Custom Files (Implement your Custom Models (How to name your model, change its personality, and more)
 
@@ -56,7 +53,7 @@ Create copies of either the Llama or Gemma2 template and put them somewhere you 
 
 - * I would recommend keeping the original template files and making copies of them when you want to make changes.
 
-=====================================
+===================================
 
 # Step 3: The easy way to change the personality of your AI (Optional)
 
@@ -70,7 +67,7 @@ Create copies of either the Llama or Gemma2 template and put them somewhere you 
 
 - * Make sure to save your changes!
 
-=====================================
+===================================
 
 # Step 4: Create the model
 
@@ -92,10 +89,8 @@ ollama list
 
 * Note you will have to change the model name in the CY.AI.py to reflect your changes, there will be instructions on this later once your python file is set up properly). Also You can create as many models as you want with Ollama.  (See Step 9 for more information on how to do this)
 
-=====================================
+===================================
 
-PYTHON Setting up your Python environment
---
 # Step 5: 
 
 Create a new Python file in your project directory
@@ -128,7 +123,7 @@ Next, Install packages from requirements.txt
    --
 pip install -r requirements.txt
 
-=====================================
+===================================
 
 # Step 7: Install NLTK in your PY environment 
 
@@ -145,14 +140,14 @@ Lastly, Deactivate virtual environment
    --
 deactivate
 
-=====================================
+===================================
 
 # Step 8:  Setting Up CY.AI
 
 Copy and paste contents from the downloaded CY.AI.py into your python file.
    --
 
-=====================================
+===================================
 
 # Step 9: Implementing custom personalities (Optional) (See Step 4)
 
@@ -163,8 +158,9 @@ if __name__ == "__main__":
     model = "GeneralAI"  # Replace with the specific model name..
 .....
 
-=====================================
+===================================
 
-Run and modify however you would like! 
+# Step 10: Run
 --
 
+Modify or expand this code however you would like!
