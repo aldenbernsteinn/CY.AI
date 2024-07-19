@@ -57,15 +57,15 @@ Create copies of either the Llama or Gemma2 template and put them somewhere you 
 
 # Step 3: The easy way to change the personality of your AI (Optional)
 
-- * In your new copy of the yaml. file, see the "SYSTEM" portion, this part is responsible for telling the AI who it is, and how it should act.
+* In your new copy of the yaml. file, see the "SYSTEM" portion, this part is responsible for telling the AI who it is, and how it should act.
 
-- * To make changes you can say things in the following format "YOU are named John, YOU are a chef"
+* To make changes you can say things in the following format "YOU are named John, YOU are a chef"
 
-- * I recommend keeping your "SYSTEM" somewhat brief, be direct in your instructions
+* I recommend keeping your "SYSTEM" somewhat brief, be direct in your instructions
 
-- * FYI: As you will see in the Gemma2 template, The "YOU never use * in your responses" is in place in the templates to prevent the AI from saying things such as "smirks" because without this modification it tends to talk in the third person. If this arises in your Llama3 model, consider adding "YOU never use * in your responses" as well.
+* FYI: As you will see in the Gemma2 template, The "YOU never use * in your responses" is in place in the templates to prevent the AI from saying things such as "smirks" because without this modification it tends to talk in the third person. If this arises in your Llama3 model, consider adding "YOU never use * in your responses" as well.
 
-- * Make sure to save your changes!
+* Make sure to save your changes!
 
 ===================================
 
@@ -80,12 +80,12 @@ Run the following command in the terminal within the same location as the yaml.:
 
 * If you want to create your own model using your own custom yaml file with a different name:
 
-ollama create (NAME YOUR MODEL) - f (NAME OF YOUR CUSTOM YAML FILE)
+- ollama create (NAME YOUR MODEL) - f (NAME OF YOUR CUSTOM YAML FILE)
 
 Run the following command in ANY terminal to see if Ollama has created your new model
    --
 
-ollama list
+- ollama list
 
 * Note you will have to change the model name in the CY.AI.py to reflect your changes, there will be instructions on this later once your python file is set up properly). Also You can create as many models as you want with Ollama.  (See Step 9 for more information on how to do this)
 
@@ -102,7 +102,7 @@ Create a new Python file in your project directory
 
 First, Create virtual environment
    --  
-python -m venv venv
+- python -m venv venv
 
 Then do one of the following:
 --
@@ -110,18 +110,18 @@ Then do one of the following:
    Activate virtual environment (Windows)
    --
 
-   venv\Scripts\activate
+   - venv\Scripts\activate
 
 OR
 --
 
    Activate virtual environment (macOS/Linux)
    --
-   source venv/bin/activate
+   - source venv/bin/activate
 
 Next, Install packages from requirements.txt
    --
-pip install -r requirements.txt
+- pip install -r requirements.txt
 
 ===================================
 
@@ -130,15 +130,15 @@ pip install -r requirements.txt
 Run the following python code (in your  py) once to download the necessary NLTK data:
    --
 
-import nltk
-nltk.download('wordnet')
+- import nltk
+  nltk.download('wordnet')
 
 remove nltk.download('wordnet') once downloaded
    --
 
 Lastly, Deactivate virtual environment
    --
-deactivate
+- deactivate
 
 ===================================
 
@@ -155,12 +155,14 @@ IF you changed the model name in your yaml. file please navigate to the followin
 --
 
 if __name__ == "__main__":
-    model = "GeneralAI"  # Replace with the specific model name..
+    model = "GeneralAI"  # Replace "GeneralAI" with the specific model name used..
 .....
+
+- If unsure of your model name use comamnd "ollama list" in your terminal to find the exact model name you used.
 
 ===================================
 
 # Step 10: Run
 --
 
-Modify or expand this code however you would like!
+- Modify or expand this code however you would like!
