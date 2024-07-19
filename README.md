@@ -19,7 +19,8 @@ Instructions will be Numbered (1, 2, 3)
 # Step 1: Setting Up Ollama
 
 
-# 1. Download Ollama here locally to your system: https://ollama.com/
+1. Download Ollama here locally to your system: https://ollama.com/
+   ---
 
 *See this video for how to set this up properly for your respective systems:
 
