@@ -10,7 +10,7 @@ Please see below on how to set up the AI Chat.
 
 KEY:
 
-# Instructions will be Numbered (1, 2, 3) and followed by #
+Instructions will be Numbered (1, 2, 3)
 * Are comments and information that could be helpful during your setup. 
 
 
@@ -19,7 +19,7 @@ KEY:
 Step 1: Setting Up Ollama
 
 
-1. # Download Ollama here locally to your system: https://ollama.com/
+# 1. Download Ollama here locally to your system: https://ollama.com/
 
 *See this video for how to set this up properly for your respective systems:
 
@@ -39,10 +39,10 @@ https://www.youtube.com/watch?v=oI7VoTM9NKQ
 YAML
 ----------
 
-Step 2: Custom Files (Implement your Custom Models (How to name your model, change its personality, and more)
+# Step 2: Custom Files (Implement your Custom Models (How to name your model, change its personality, and more)
 
 
-1. # Create copies of either the Llama or Gemma2 template and put them somewhere you can access in your project directory
+# 1. Create copies of either the Llama or Gemma2 template and put them somewhere you can access in your project directory
 
 
 * optional
@@ -54,7 +54,7 @@ Step 2: Custom Files (Implement your Custom Models (How to name your model, chan
 
 ---------
 
-Step 3: The easy way to change the personality of your AI 
+# Step 3: The easy way to change the personality of your AI 
  # This step is optional
 
 - * In your own copy of the yaml. file, see the "SYSTEM" portion, this part is responsible for telling the AI who it is, and how it should act.
@@ -69,10 +69,10 @@ Step 3: The easy way to change the personality of your AI
 
 ---------
 
-Step 4: Create the model
+# Step 4: Create the model
 
 
-1. # Note that the default name set in CY.AI.py will be GeneralAI, if you want your model to work immediately with no personal customization. run the following command in the terminal within the same location that the yaml. file is located:
+# 1. Note that the default name set in CY.AI.py will be GeneralAI, if you want your model to work immediately with no personal customization. run the following command in the terminal within the same location that the yaml. file is located:
 
  ollama create General AI - f Gemma2_9bTemplate.yaml      OR      ollama create General AI - f Llama3yamltemplate.yaml (not as accurate)
 
@@ -89,51 +89,51 @@ ollama create (NAME OF YOUR MODEL) - f (NAME OF YOUR YAML FILE)
 PYTHON Setting up your Python environment
 
 --
-Step 5: 
+# Step 5: 
 
-1. # Create a new Python file in your project directory 
+# 1. Create a new Python file in your project directory 
 
 ---
 
-Step 6: Ensure Dependencies
+# Step 6: Ensure Dependencies
 
-1. # Create virtual environment
+# 1.  Create virtual environment
 python -m venv venv
 
-2. # Activate virtual environment (Windows)
+# 2. Activate virtual environment (Windows)
 venv\Scripts\activate
 
-3. # Activate virtual environment (macOS/Linux)
+# 3. Activate virtual environment (macOS/Linux)
 source venv/bin/activate
 
-4. # Install packages from requirements.txt
+# 4. Install packages from requirements.txt
 pip install -r requirements.txt
 
 ---
 
-Step 7: Install NLTK in your PY environment 
+# Step 7: Install NLTK in your PY environment 
 
-1. # Run the following python code (in your  py) once to download the necessary NLTK data:
+# 1. Run the following python code (in your  py) once to download the necessary NLTK data:
 
 import nltk
 nltk.download('wordnet')
 
-2. # remove nltk.download('wordnet') once downloaded
+# 2. remove nltk.download('wordnet') once downloaded
 
-3. # Deactivate virtual environment
+# 3. Deactivate virtual environment
 deactivate
 
 -----
 
-Step 8: 
+# Step 8:  ...
 
-1. # Copy and paste contents from the downloaded CY.AI.py into your python file.
+# 1. Copy and paste contents from the downloaded CY.AI.py into your python file.
 
 ---
 
-Step 9: 
+# Step 9: 
 
-* this entire step is optional
+# * this entire step is optional
 
 * IF you changed the model name in your yaml. file please navigate to the following part of the python code (line 436 defaulted):
 
@@ -142,7 +142,7 @@ if __name__ == "__main__":
 .....
 
 
-1. # Change the model name to match the one you created with this command: ollama create (NAME OF YOUR MODEL) - f (NAME OF YOUR YAML FILE)
+# 1. Change the model name to match the one you created with this command: ollama create (NAME OF YOUR MODEL) - f (NAME OF YOUR YAML FILE)
 
 =======
 
