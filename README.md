@@ -41,21 +41,19 @@ https://www.youtube.com/watch?v=oI7VoTM9NKQ
 
 ===================================
 
-# Step 2: Custom Files (Implement your Custom Models (How to name your model, change its personality, and more)
+# Step 2: Copy Template YAML. to Project Directory
 
 
 - Create copies of either the Llama or Gemma2 template and put them somewhere you can access in your project directory
    --
+- * I have included 2 template YAML files for you and set up the proper parameters/templates.
 
-
-* optional
-- * I have included 2 template YAML files for you and set up the proper parameters/templates. The purpose of this is to create a new unique tampered model to use for your code.
-
-- * I would recommend keeping the original template files and making copies of them when you want to make changes.
 
 ===================================
 
-# Step 3: The easy way to change the personality of your AI (Optional)
+# Step 3: Change the personality of your AI (Optional)
+
+- * I would recommend keeping the original template files and making renamed copies of them such as "Custom.yaml"
 
 * In your new copy of the yaml. file, see the "SYSTEM" portion, this part is responsible for telling the AI who it is, and how it should act.
 
@@ -66,6 +64,8 @@ https://www.youtube.com/watch?v=oI7VoTM9NKQ
 * FYI: As you will see in the Gemma2 template, The "YOU never use * in your responses" is in place in the templates to prevent the AI from saying things such as "smirks" because without this modification it tends to talk in the third person. If this arises in your Llama3 model, consider adding "YOU never use * in your responses" as well.
 
 * Make sure to save your changes!
+
+* Be sure to run the Optional command seen in Step 4 and Step 9 as well when you reach it.
 
 ===================================
 
@@ -78,7 +78,7 @@ https://www.youtube.com/watch?v=oI7VoTM9NKQ
 
  ollama create General AI - f Gemma2_9bTemplate.yaml      OR      ollama create General AI - f Llama3yamltemplate.yaml (not as accurate)
 
-* If you want to create your own model using your own custom yaml file with a different name:
+* OR (Optional): If you want to create your own model using your own custom yaml file with a different name:
 
 - ollama create (NAME YOUR MODEL) - f (NAME OF YOUR CUSTOM YAML FILE)
 
@@ -149,7 +149,7 @@ https://www.youtube.com/watch?v=oI7VoTM9NKQ
 
 ===================================
 
-# Step 9: Implementing custom personalities (Optional) (See Step 4)
+# Step 9 (Optional) : Implementing Custom Personalities (See Step 4)
 
 - IF you changed the model name in your yaml. file please navigate to the following part of the python code (line 436 defaulted):
 --
