@@ -1,156 +1,102 @@
-Create Your own Personal Artificial Intelligence Chatbot Application From CY.AI! 
---
+# Create Your Own Personal Artificial Intelligence Chatbot Application From CY.AI
 
-This program serves as a working template for users to personalize, expand, and create their own AI chat applications.
+This program serves as a working template for users to personalize, expand, and create their own AI chat applications. It includes a custom chat box and voice-to-voice functionality to facilitate conversation between the user and AI.
 
-Includes a custom chat box and custom voice-to-voice function that facitilitaes conversation between user and AI.
+All dependencies are completely free and will work instantly locally on a computer. However, to run on a website, you will require VPS or Cloud Services.
 
-ALL dependencies are completely free. Will work instantly locally on a computer. Requires VPS or Cloud Services to run on a Website.
+## Instructions
 
-Please see instructions bellow:
+### Step 1: Setting Up Ollama
 
-# Step 1: Setting Up Ollama
+- **Download Ollama**: [Download Ollama here](https://ollama.com/).
+- **Setup Guide**: Watch [this video](https://www.youtube.com/watch?v=oI7VoTM9NKQ) for setup instructions specific to your system.
 
+**Note**: The `CY.AI.py` script was built using Llama3 and Gemma2. Llama3 is great for natural conversation, while Gemma2 provides the most up-to-date information. Templates are included for both Llama3 and Gemma2. If you prefer other models like Phi3 or Mistral, you'll need to create your own custom YAML file. Ollama provides information to set this up, but you’ll need to format it for YAML.
 
-- Download Ollama here locally to your system: https://ollama.com/
-   ---
+### Step 2: Copy Template YAML to Project Directory
 
-* See this video for how to set this up properly for your respective systems:
+- **Templates Provided**: Two YAML templates (for Llama3 and Gemma2) are included. Copy the relevant template to your project directory.
 
-https://www.youtube.com/watch?v=oI7VoTM9NKQ
+### Step 3 (Optional): Change the Personality of Your AI
 
-===================================
+- **Customize YAML**: Rename and modify a copy of the YAML file, especially the "SYSTEM" portion, which dictates the AI’s behavior and personality. For example, you can say: "YOU are named John, YOU are a chef."
+- **Avoid Third-Person Responses**: If the AI talks in third person, add "YOU never use * in your responses" to prevent this behavior.
 
-* Before proceeding to the next step, here is some information about Ollama models, compatibility, and how to customize other models besides Llama3 and Gemma2.
+### Step 4: Create the Model
 
-* The CY.AI.py python script was built while using Llama3 and Gemma2. Llama3 is great for natural conversation, while Gemma2 has the most up-to-date information and is better for informational queries than Llama3. I have created templates that are  included, meant for implementing custom models for both Lamma3 and Gemma2. If this sounds good to you then proceed and use the already created templates for Llama3 or Gemma2.
+- **Default Model Name**: The script uses `GeneralAI` by default. To create your model, run:
+    ```bash
+    ollama create GeneralAI -f Gemma2_9bTemplate.yaml
+    ```
+    or
+    ```bash
+    ollama create GeneralAI -f Llama3yamltemplate.yaml
+    ```
+- **Custom Model**: To use a custom YAML file:
+    ```bash
+    ollama create (NAME_YOUR_MODEL) -f (NAME_OF_YOUR_CUSTOM_YAML_FILE)
+    ```
+- **Verify Model Creation**:
+    ```bash
+    ollama list
+    ```
 
-- If you would prefer to use other models such as Phi3, or Mistral, then you will have to make your own custom yaml. yourself. The  parameters/template are handled differently for each and every model. Ollama provides the information you would need to set this up, but you will have to format it for yaml. 
+**Note**: Update the model name in `CY.AI.py` if you used a custom name. You can create multiple models with Ollama (see Step 9 for more details).
 
+### Step 5: Create a New Python File
 
-===================================
+- **Setup**: Create a new Python file in your project directory.
 
-# Step 2: Copy Template YAML. to Project Directory
+### Step 6: Ensure Dependencies
 
+- **Create Virtual Environment**:
+    ```bash
+    python -m venv venv
+    ```
+- **Activate Virtual Environment**:
+    - **Windows**:
+        ```bash
+        venv\Scripts\activate
+        ```
+    - **macOS/Linux**:
+        ```bash
+        source venv/bin/activate
+        ```
+- **Install Packages**:
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-- Create copies of either the Llama or Gemma2 template and put them somewhere you can access in your project directory
-   --
-* I have included 2 template YAML files for you and set up the proper parameters/templates.
+### Step 7: Install NLTK in Your Python Environment
 
+- **Download NLTK Data**:
+    ```python
+    import nltk
+    nltk.download('wordnet')
+    ```
+- **Remove Download Command**: Once downloaded, remove `nltk.download('wordnet')`.
+- **Deactivate Virtual Environment**:
+    ```bash
+    deactivate
+    ```
 
-===================================
+### Step 8: Setting Up CY.AI
 
-# Step 3 (Optional): Change the personality of your AI
+- **Copy Script**: Copy and paste the contents of `CY.AI.py` into your Python file.
 
-* I would recommend keeping the original template files and making renamed copies of them such as "Custom.yaml"
+### Step 9 (Optional): Implementing Custom Personalities
 
-* In your new copy of the yaml. file, see the "SYSTEM" portion, this part is responsible for telling the AI who it is, and how it should act.
+- **Update Model Name**: If you changed the model name in your YAML file, update it in the Python code (line 436 by default):
+    ```python
+    if __name__ == "__main__":
+        model = "GeneralAI"  # Replace with the specific model name used.
+    ```
+- **Check Model Name**: Use `ollama list` to find your model name if unsure.
 
-* To make changes you can say things in the following format "YOU are named John, YOU are a chef"
+### Step 10: Run
 
-* I recommend keeping your "SYSTEM" somewhat brief, be direct in your instructions
-
-* FYI: As you will see in the Gemma2 template, The "YOU never use * in your responses" is in place in the templates to prevent the AI from saying things such as "smirks" because without this modification it tends to talk in the third person. If this arises in your Llama3 model, consider adding "YOU never use * in your responses" as well.
-
-* Make sure to save your changes!
-
-* Be sure to run the Optional command seen in Step 4 and Step 9 as well when you reach it.
-
-===================================
-
-# Step 4: Create the model
-
-*Note that the default name set in CY.AI.py will be GeneralAI, please do the following if you want your model to work later with the placeholder model in the CY.AI.py script (this can easily be changed later)
-
-- Run the following command in the terminal within the same location as the yaml.:
-   --
-
- ollama create General AI - f Gemma2_9bTemplate.yaml      OR      ollama create General AI - f Llama3yamltemplate.yaml (not as accurate)
-
-* OR (Optional): If you want to create your own model using your own custom yaml file with a different name:
-
-- ollama create (NAME YOUR MODEL) - f (NAME OF YOUR CUSTOM YAML FILE)
-
-- Run the following command in ANY terminal to see if Ollama has created your new model
-   --
-
-- ollama list
-
-* Note you will have to change the model name in the CY.AI.py to reflect your changes, there will be instructions on this later once your python file is set up properly). Also You can create as many models as you want with Ollama.  (See Step 9 for more information on how to do this)
-
-===================================
-
-# Step 5: 
-
--- Create a new Python file in your project directory
-   --
+- **Modify and Expand**: Feel free to modify or expand the code as needed!
 
 ---
 
-# Step 6: Ensure Dependencies
-
-- First, Create virtual environment
-  --  
-- python -m venv venv
-
-- Then do one of the following:
-   --
-
-   - Activate virtual environment (Windows)
-      --
-
-   - venv\Scripts\activate
-
-- OR
-   --
-
-   - Activate virtual environment (macOS/Linux)
-      --
-   - source venv/bin/activate
-
-- Next, Install packages from requirements.txt
-   --
-- pip install -r requirements.txt
-
-===================================
-
-# Step 7: Install NLTK in your PY environment 
-
-- Run the following python code (in your  py) once to download the necessary NLTK data:
-   --
-
-- import nltk
-  nltk.download('wordnet')
-
-- Remove nltk.download('wordnet') once downloaded
-   --
-
-- Lastly, Deactivate virtual environment
-   --
-- deactivate
-
-===================================
-
-# Step 8:  Setting Up CY.AI
-
-- Copy and paste contents from the downloaded CY.AI.py into your python file.
-   --
-
-===================================
-
-# Step 9 (Optional): Implementing Custom Personalities (See Step 4)
-
-- IF you changed the model name in your yaml. file please navigate to the following part of the python code (line 436 defaulted):
---
-
-if __name__ == "__main__":
-    model = "GeneralAI"  # Replace "GeneralAI" with the specific model name used..
-.....
-
-* If unsure of your model name use comamnd "ollama list" in your terminal to find the exact model name you used.
-
-===================================
-
-# Step 10: Run
-
-- Modify or expand this code however you would like!
+**Enjoy creating your personalized AI chatbot!** If you have any questions or need further assistance, don't hesitate to ask.
