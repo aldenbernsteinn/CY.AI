@@ -1,4 +1,12 @@
-Thank you for downloading CY.AI, Now let's get to Creating Your Artificial Intelligence! Complete with custom chat box, and voice-to-voice conversation. All dependencies are completely free.
+Create Your own Artificial Intelligence chatbot with CY.AI! 
+
+Complete with a custom chat box and voice-to-voice conversation functions.
+
+This program serves as a working template for users to expand upon and personalize.
+
+ALL dependencies are completely free. WILL work instantly locally on a computer. Require VPS or Cloud Services to run on a Website.
+
+Please see below on how to set up the AI Chat.
 
 KEY:
 
@@ -19,11 +27,11 @@ https://www.youtube.com/watch?v=oI7VoTM9NKQ
 
 =====================================
 
-* Before proceeding to the next step, here is some Information about Ollama model's, compatibility, and how to customize other models besides Llama3 and Gemma2.
+* Before proceeding to the next step, here is some information about Ollama models, compatibility, and how to customize other models besides Llama3 and Gemma2.
 
-* The CY.AI.py python script was built while using Llama3 and Gemma2. Llama3 is great for natural conversation, while Gemma2 has the most up-to-date information and is better for informational queries than Llama3. I have created templates that are  included, meant for implementing custom models for both Lamma3 and Gemma2. If this sounds good to you then poceed and use the already created templates for Llama3 or Gemma2.
+* The CY.AI.py python script was built while using Llama3 and Gemma2. Llama3 is great for natural conversation, while Gemma2 has the most up-to-date information and is better for informational queries than Llama3. I have created templates that are  included, meant for implementing custom models for both Lamma3 and Gemma2. If this sounds good to you then proceed and use the already created templates for Llama3 or Gemma2.
 
- -  * If you would prefer to use other models such as Phi3, or Mistral, then you will have to make your own custom yaml. yourself. The  parameters/template are handled differently for each and every model.Ollama provides the information you would need to set this up, but you will have to format it for yaml. 
+ -  * If you would prefer to use other models such as Phi3, or Mistral, then you will have to make your own custom yaml. yourself. The  parameters/template are handled differently for each and every model. Ollama provides the information you would need to set this up, but you will have to format it for yaml. 
 
 
 =======================================
@@ -47,9 +55,9 @@ Step 2: Custom Files (Implement your Custom Models (How to name your model, chan
 ---------
 
 Step 3: The easy way to change the personality of your AI 
- # this step is optional
+ # This step is optional
 
-- * In your own copy of the yaml file, see the "SYSTEM" portion, this part is responsible for telling the AI who it is, and how it should act.
+- * In your own copy of the yaml. file, see the "SYSTEM" portion, this part is responsible for telling the AI who it is, and how it should act.
 
 - * To make changes you can say things in the following format "YOU are named John, YOU are a chef"
 
@@ -64,7 +72,7 @@ Step 3: The easy way to change the personality of your AI
 Step 4: Create the model
 
 
-1. # Note that default name set in CY.AI.py will be GeneralAI, if you want your model to work immediately with no personal customization. run the following command in the terminal within the same location that the yaml. file is located:
+1. # Note that the default name set in CY.AI.py will be GeneralAI, if you want your model to work immediately with no personal customization. run the following command in the terminal within the same location that the yaml. file is located:
 
  ollama create General AI - f Gemma2_9bTemplate.yaml      OR      ollama create General AI - f Llama3yamltemplate.yaml (not as accurate)
 
@@ -78,12 +86,12 @@ ollama create (NAME OF YOUR MODEL) - f (NAME OF YOUR YAML FILE)
 
 =========================================
 
-PYTHON Setting up your python environment
+PYTHON Setting up your Python environment
 
 --
 Step 5: 
 
-1. # Create a new python file in your project directory 
+1. # Create a new Python file in your project directory 
 
 ---
 
@@ -119,7 +127,7 @@ deactivate
 
 Step 8: 
 
-1. # Copy and paste contents from downloaded CY.AI.py into your python file.
+1. # Copy and paste contents from the downloaded CY.AI.py into your python file.
 
 ---
 
@@ -127,7 +135,7 @@ Step 9:
 
 * this entire step is optional
 
-* IF you changed the model name in your yaml file please navigate to the following part of the python code (line 436 defaulted):
+* IF you changed the model name in your yaml. file please navigate to the following part of the python code (line 436 defaulted):
 
 if __name__ == "__main__":
     model = "GeneralAI"  # Replace with the specific model name..
