@@ -1,0 +1,7 @@
+requests
+SpeechRecognition
+gtts
+pydub
+simpleaudio
+pyenchant
+nltk
