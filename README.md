@@ -26,17 +26,17 @@ KEY:
 - Download Ollama here locally to your system: https://ollama.com/
    ---
 
-*See this video for how to set this up properly for your respective systems:
+* See this video for how to set this up properly for your respective systems:
 
 https://www.youtube.com/watch?v=oI7VoTM9NKQ
 
 ===================================
 
-* Before proceeding to the next step, here is some information about Ollama models, compatibility, and how to customize other models besides Llama3 and Gemma2.
+- Before proceeding to the next step, here is some information about Ollama models, compatibility, and how to customize other models besides Llama3 and Gemma2.
 
-* The CY.AI.py python script was built while using Llama3 and Gemma2. Llama3 is great for natural conversation, while Gemma2 has the most up-to-date information and is better for informational queries than Llama3. I have created templates that are  included, meant for implementing custom models for both Lamma3 and Gemma2. If this sounds good to you then proceed and use the already created templates for Llama3 or Gemma2.
+- The CY.AI.py python script was built while using Llama3 and Gemma2. Llama3 is great for natural conversation, while Gemma2 has the most up-to-date information and is better for informational queries than Llama3. I have created templates that are  included, meant for implementing custom models for both Lamma3 and Gemma2. If this sounds good to you then proceed and use the already created templates for Llama3 or Gemma2.
 
-* * If you would prefer to use other models such as Phi3, or Mistral, then you will have to make your own custom yaml. yourself. The  parameters/template are handled differently for each and every model. Ollama provides the information you would need to set this up, but you will have to format it for yaml. 
+* If you would prefer to use other models such as Phi3, or Mistral, then you will have to make your own custom yaml. yourself. The  parameters/template are handled differently for each and every model. Ollama provides the information you would need to set this up, but you will have to format it for yaml. 
 
 
 ===================================
