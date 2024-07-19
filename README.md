@@ -13,8 +13,8 @@ Please see instructions bellow:
 
 KEY:
 
-Instructions will be formated like this
---
+- Instructions will be formated like this
+   --
 * comments and information that could be helpful during your setup are formated like this
 
 
@@ -23,7 +23,7 @@ Instructions will be formated like this
 # Step 1: Setting Up Ollama
 
 
-Download Ollama here locally to your system: https://ollama.com/
+- Download Ollama here locally to your system: https://ollama.com/
    ---
 
 *See this video for how to set this up properly for your respective systems:
@@ -44,7 +44,7 @@ https://www.youtube.com/watch?v=oI7VoTM9NKQ
 # Step 2: Custom Files (Implement your Custom Models (How to name your model, change its personality, and more)
 
 
-Create copies of either the Llama or Gemma2 template and put them somewhere you can access in your project directory
+- Create copies of either the Llama or Gemma2 template and put them somewhere you can access in your project directory
    --
 
 
