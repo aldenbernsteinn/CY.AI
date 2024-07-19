@@ -1,4 +1,4 @@
-Create Your own Personal Artificial Intelligence Chatbot Application with CY.AI! 
+Create Your own Personal Artificial Intelligence Chatbot Application From CY.AI! 
 --
 
 This program serves as a working template for users to personalize, expand, and create their own AI chat applications.
