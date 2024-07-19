@@ -36,7 +36,7 @@ https://www.youtube.com/watch?v=oI7VoTM9NKQ
 
 * The CY.AI.py python script was built while using Llama3 and Gemma2. Llama3 is great for natural conversation, while Gemma2 has the most up-to-date information and is better for informational queries than Llama3. I have created templates that are  included, meant for implementing custom models for both Lamma3 and Gemma2. If this sounds good to you then proceed and use the already created templates for Llama3 or Gemma2.
 
- -  * If you would prefer to use other models such as Phi3, or Mistral, then you will have to make your own custom yaml. yourself. The  parameters/template are handled differently for each and every model. Ollama provides the information you would need to set this up, but you will have to format it for yaml. 
+* * If you would prefer to use other models such as Phi3, or Mistral, then you will have to make your own custom yaml. yourself. The  parameters/template are handled differently for each and every model. Ollama provides the information you would need to set this up, but you will have to format it for yaml. 
 
 
 ===================================
@@ -46,14 +46,14 @@ https://www.youtube.com/watch?v=oI7VoTM9NKQ
 
 - Create copies of either the Llama or Gemma2 template and put them somewhere you can access in your project directory
    --
-- * I have included 2 template YAML files for you and set up the proper parameters/templates.
+* I have included 2 template YAML files for you and set up the proper parameters/templates.
 
 
 ===================================
 
 # Step 3: Change the personality of your AI (Optional)
 
-- * I would recommend keeping the original template files and making renamed copies of them such as "Custom.yaml"
+* I would recommend keeping the original template files and making renamed copies of them such as "Custom.yaml"
 
 * In your new copy of the yaml. file, see the "SYSTEM" portion, this part is responsible for telling the AI who it is, and how it should act.
 
