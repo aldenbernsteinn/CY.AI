@@ -10,7 +10,8 @@ Please see below on how to set up the AI Chat.
 
 KEY:
 
-Instructions will be Numbered (1, 2, 3)
+Instructions will be Numbered (1.  , 2.   , 3.   )
+--
 * Are comments and information that could be helpful during your setup. 
 
 
