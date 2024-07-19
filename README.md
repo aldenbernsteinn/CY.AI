@@ -9,17 +9,6 @@ ALL dependencies are completely free. WILL work instantly locally on a computer.
 
 Please see instructions bellow:
 
-===================================
-
-KEY:
-
-- Instructions will be formated like this
-   --
-* comments and information that could be helpful during your setup are formated like this
-
-
-===================================
-
 # Step 1: Setting Up Ollama
 
 
