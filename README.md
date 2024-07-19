@@ -1,4 +1,4 @@
-# Create Your own Artificial Intelligence chatbot with CY.AI! 
+Create Your own Artificial Intelligence chatbot with CY.AI! 
 
 Complete with a custom chat box and voice-to-voice conversation functions.
 
