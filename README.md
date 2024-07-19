@@ -40,7 +40,7 @@ https://www.youtube.com/watch?v=oI7VoTM9NKQ
 
 ===================================
 
-# Step 3: Change the personality of your AI (Optional)
+# Step 3 (Optional): Change the personality of your AI
 
 * I would recommend keeping the original template files and making renamed copies of them such as "Custom.yaml"
 
@@ -138,7 +138,7 @@ https://www.youtube.com/watch?v=oI7VoTM9NKQ
 
 ===================================
 
-# Step 9 (Optional) : Implementing Custom Personalities (See Step 4)
+# Step 9 (Optional): Implementing Custom Personalities (See Step 4)
 
 - IF you changed the model name in your yaml. file please navigate to the following part of the python code (line 436 defaulted):
 --
