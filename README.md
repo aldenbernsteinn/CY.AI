@@ -73,7 +73,7 @@ https://www.youtube.com/watch?v=oI7VoTM9NKQ
 
 *Note that the default name set in CY.AI.py will be GeneralAI, please do the following if you want your model to work later with the placeholder model in the CY.AI.py script (this can easily be changed later)
 
-Run the following command in the terminal within the same location as the yaml.:
+- Run the following command in the terminal within the same location as the yaml.:
    --
 
  ollama create General AI - f Gemma2_9bTemplate.yaml      OR      ollama create General AI - f Llama3yamltemplate.yaml (not as accurate)
@@ -82,7 +82,7 @@ Run the following command in the terminal within the same location as the yaml.:
 
 - ollama create (NAME YOUR MODEL) - f (NAME OF YOUR CUSTOM YAML FILE)
 
-Run the following command in ANY terminal to see if Ollama has created your new model
+- Run the following command in ANY terminal to see if Ollama has created your new model
    --
 
 - ollama list
@@ -93,33 +93,33 @@ Run the following command in ANY terminal to see if Ollama has created your new 
 
 # Step 5: 
 
-Create a new Python file in your project directory
+-- Create a new Python file in your project directory
    --
 
 ---
 
 # Step 6: Ensure Dependencies
 
-First, Create virtual environment
-   --  
+- First, Create virtual environment
+  --  
 - python -m venv venv
 
-Then do one of the following:
---
-
-   Activate virtual environment (Windows)
+- Then do one of the following:
    --
+
+   - Activate virtual environment (Windows)
+      --
 
    - venv\Scripts\activate
 
-OR
---
-
-   Activate virtual environment (macOS/Linux)
+- OR
    --
+
+   - Activate virtual environment (macOS/Linux)
+      --
    - source venv/bin/activate
 
-Next, Install packages from requirements.txt
+- Next, Install packages from requirements.txt
    --
 - pip install -r requirements.txt
 
@@ -127,16 +127,16 @@ Next, Install packages from requirements.txt
 
 # Step 7: Install NLTK in your PY environment 
 
-Run the following python code (in your  py) once to download the necessary NLTK data:
+- Run the following python code (in your  py) once to download the necessary NLTK data:
    --
 
 - import nltk
   nltk.download('wordnet')
 
-remove nltk.download('wordnet') once downloaded
+- Remove nltk.download('wordnet') once downloaded
    --
 
-Lastly, Deactivate virtual environment
+- Lastly, Deactivate virtual environment
    --
 - deactivate
 
@@ -144,21 +144,21 @@ Lastly, Deactivate virtual environment
 
 # Step 8:  Setting Up CY.AI
 
-Copy and paste contents from the downloaded CY.AI.py into your python file.
+- Copy and paste contents from the downloaded CY.AI.py into your python file.
    --
 
 ===================================
 
 # Step 9: Implementing custom personalities (Optional) (See Step 4)
 
-IF you changed the model name in your yaml. file please navigate to the following part of the python code (line 436 defaulted):
+- IF you changed the model name in your yaml. file please navigate to the following part of the python code (line 436 defaulted):
 --
 
 if __name__ == "__main__":
     model = "GeneralAI"  # Replace "GeneralAI" with the specific model name used..
 .....
 
-- If unsure of your model name use comamnd "ollama list" in your terminal to find the exact model name you used.
+* If unsure of your model name use comamnd "ollama list" in your terminal to find the exact model name you used.
 
 ===================================
 
