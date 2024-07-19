@@ -1,9 +1,9 @@
-Create Your own Artificial Intelligence chatbot with CY.AI! 
+Create Your own Personal Artificial Intelligence Chatbot Application with CY.AI! 
 --
 
-Complete with a custom chat box and voice-to-voice conversation functions.
-
 This program serves as a working template for users to personalize, expand, and create their own AI chat applications.
+
+Includes a custom chat box and custom voice-to-voice function that facitilitaes conversation between user and AI.
 
 ALL dependencies are completely free. WILL work instantly locally on a computer. Require VPS or Cloud Services to run on a Website.
 
