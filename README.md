@@ -5,7 +5,7 @@ This program serves as a working template for users to personalize, expand, and 
 
 Includes a custom chat box and custom voice-to-voice function that facitilitaes conversation between user and AI.
 
-ALL dependencies are completely free. WILL work instantly locally on a computer. Require VPS or Cloud Services to run on a Website.
+ALL dependencies are completely free. Will work instantly locally on a computer. Requires VPS or Cloud Services to run on a Website.
 
 Please see instructions bellow:
 
