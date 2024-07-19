@@ -10,9 +10,9 @@ Please see below on how to set up the AI Chat.
 
 KEY:
 
-Instructions will be Numbered (1.  , 2.   , 3.   )
+Instructions will be formated like this
 --
-* Are comments and information that could be helpful during your setup. 
+* comments and information that could be helpful during your setup are formated like this
 
 
 =====================
@@ -20,7 +20,7 @@ Instructions will be Numbered (1.  , 2.   , 3.   )
 # Step 1: Setting Up Ollama
 
 
-1. Download Ollama here locally to your system: https://ollama.com/
+Download Ollama here locally to your system: https://ollama.com/
    ---
 
 *See this video for how to set this up properly for your respective systems:
@@ -44,7 +44,7 @@ YAML
 # Step 2: Custom Files (Implement your Custom Models (How to name your model, change its personality, and more)
 
 
-1. Create copies of either the Llama or Gemma2 template and put them somewhere you can access in your project directory
+Create copies of either the Llama or Gemma2 template and put them somewhere you can access in your project directory
    --
 
 
@@ -59,13 +59,13 @@ YAML
 
 # Step 3: The easy way to change the personality of your AI (Optional)
 
-- * In your own copy of the yaml. file, see the "SYSTEM" portion, this part is responsible for telling the AI who it is, and how it should act.
+- * In your new copy of the yaml. file, see the "SYSTEM" portion, this part is responsible for telling the AI who it is, and how it should act.
 
 - * To make changes you can say things in the following format "YOU are named John, YOU are a chef"
 
 - * I recommend keeping your "SYSTEM" somewhat brief, be direct in your instructions
 
-- * FYI: As you will see in the Gemma2 template, The "YOU never use * in your responses" is in place to prevent the AI from saying things such as "smirks" because without this modification it tends to talk in the third person. If this arises in your Llama3 model, consider adding "YOU never use * in your responses" as well.
+- * FYI: As you will see in the Gemma2 template, The "YOU never use * in your responses" is in place in the templates to prevent the AI from saying things such as "smirks" because without this modification it tends to talk in the third person. If this arises in your Llama3 model, consider adding "YOU never use * in your responses" as well.
 
 - * Make sure to save your changes!
 
@@ -73,22 +73,23 @@ YAML
 
 # Step 4: Create the model
 
+*Note that the default name set in CY.AI.py will be GeneralAI, please do the following if you want your model to work later with the placeholder model in the CY.AI.py script (this can easily be changed later)
 
-1. Note that the default name set in CY.AI.py will be GeneralAI, if you want your model to work immediately with no personal customization. run the following command in the terminal within the same location that the yaml. file is located:
+Run the following command in the terminal within the same location as the yaml.:
    --
 
  ollama create General AI - f Gemma2_9bTemplate.yaml      OR      ollama create General AI - f Llama3yamltemplate.yaml (not as accurate)
 
-* If you want to create multiple models or change the name of the models then execute the following command:
+* If you want to create your own model using your own custom yaml file with a different name:
 
-ollama create (NAME OF YOUR MODEL) - f (NAME OF YOUR YAML FILE)
+ollama create (NAME YOUR MODEL) - f (NAME OF YOUR CUSTOM YAML FILE)
 
-2. Run the following command in ANY terminal to see if Ollama has created your new model
+Run the following command in ANY terminal to see if Ollama has created your new model
    --
 
 ollama list
 
-* Note you will have to change the model name in the CY.AI.py to reflect your changes, there will be instructions on this later once your python file is set up properly). Also You can create as many models as you want with Ollama.
+* Note you will have to change the model name in the CY.AI.py to reflect your changes, there will be instructions on this later once your python file is set up properly). Also You can create as many models as you want with Ollama.  (See Step 9 for more information on how to do this)
 
 
 
@@ -98,30 +99,33 @@ PYTHON Setting up your Python environment
 --
 # Step 5: 
 
-1. Create a new Python file in your project directory
+Create a new Python file in your project directory
    --
 
 ---
 
 # Step 6: Ensure Dependencies
 
-1. Create virtual environment
+First, Create virtual environment
    --  
 python -m venv venv
 
-2.Activate virtual environment (Windows)
+Then do one of the following:
+--
+
+   Activate virtual environment (Windows)
    --
 
-venv\Scripts\activate
+   venv\Scripts\activate
 
 OR
 --
 
-2. Activate virtual environment (macOS/Linux)
+   Activate virtual environment (macOS/Linux)
    --
-source venv/bin/activate
+   source venv/bin/activate
 
-3. Install packages from requirements.txt
+Next, Install packages from requirements.txt
    --
 pip install -r requirements.txt
 
@@ -129,16 +133,16 @@ pip install -r requirements.txt
 
 # Step 7: Install NLTK in your PY environment 
 
-1. Run the following python code (in your  py) once to download the necessary NLTK data:
+Run the following python code (in your  py) once to download the necessary NLTK data:
    --
 
 import nltk
 nltk.download('wordnet')
 
-2. remove nltk.download('wordnet') once downloaded
+remove nltk.download('wordnet') once downloaded
    --
 
-3. Deactivate virtual environment
+Lastly, Deactivate virtual environment
    --
 deactivate
 
@@ -146,22 +150,19 @@ deactivate
 
 # Step 8:  Setting Up CY.AI
 
-1. Copy and paste contents from the downloaded CY.AI.py into your python file.
+Copy and paste contents from the downloaded CY.AI.py into your python file.
    --
 
 ---
 
-# Step 9: Implementing custom personalities (Optional)
+# Step 9: Implementing custom personalities (Optional) (See Step 4)
 
-* IF you changed the model name in your yaml. file please navigate to the following part of the python code (line 436 defaulted):
+IF you changed the model name in your yaml. file please navigate to the following part of the python code (line 436 defaulted):
+--
 
 if __name__ == "__main__":
     model = "GeneralAI"  # Replace with the specific model name..
 .....
-
-
-1. Change the model name to match the one you created with this command: ollama create (NAME OF YOUR MODEL) - f (NAME OF YOUR YAML FILE)
-   --
 
 =======
 
