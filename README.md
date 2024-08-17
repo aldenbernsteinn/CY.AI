@@ -1,4 +1,4 @@
-# Create Your Own Personal Artificial Intelligence Chatbot Application From CY.AI
+# Create Your Own Personal Voiced Artificial Intelligence Chatbot Application From CY.AI
 
 This program serves as a working template for users to personalize, expand, and create their own voice operated AI chat applications, facilitating voice-to-voice conversation between the user and AI.
 
